@@ -1,0 +1,59 @@
+<html><body>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/bonsai/0.4/bonsai.min.js"></script>
+<div id="movie"></div>
+<script>
+  bonsai.run(document.getElementById('movie'), {
+    code: function() {
+    
+    
+var leftleg = new Rect(120,400,100,25,[5]);
+leftleg.fill('orange');
+leftleg.stroke('black',3);
+leftleg.addTo(stage);
+var rightleg = new Rect(220,400,100,25,[5]);
+rightleg.fill('orange');
+rightleg.stroke('black',3);
+rightleg.addTo(stage);
+var head = new Rect(70,10,300,400,[100]);
+head.fill('grey');
+head.stroke('black',5);
+head.addTo(stage)
+var belly = new Rect(160,290,120,120,[20]);
+belly.fill('white');
+belly.stroke('black',5);
+belly.addTo(stage);
+var eye1 = new Ellipse(150,150,10,30);
+eye1.fill('black');
+eye1.stroke('black',5);
+eye1.addTo(stage);
+var eye1 = new Ellipse(290,150,10,30);
+eye1.fill('black');
+eye1.stroke('black',5);
+eye1.addTo(stage);
+var beak = new Star(220,200,10,3,3);
+beak.fill('orange');
+beak.stroke('black',3);
+beak.addTo(stage);
+var leftarm =new Rect(55,250,25,100,[5]);
+leftarm.fill('grey');
+leftarm.stroke('black',4);
+leftarm.addTo(stage);
+var rightarm =new Rect(360,250,25,100,[5]);
+rightarm.fill('grey');
+rightarm.stroke('black',4);
+rightarm.addTo(stage);
+
+var music = new Audio([ { src: 'scalehighhigha.wav' } ]);
+	   music.addTo(stage)
+	   music.on('load', function() 
+	   {
+  			this.play();
+	   });
+
+    },
+    width: 1000,   //change the width and height of the canvas
+    height: 1000
+  });
+</script></body>
+</html>
+web
